@@ -1,0 +1,35 @@
+#navbar{
+    height: $nav-height;
+    color: white;
+    background: $bg-color;
+
+    .row{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: inherit;
+        padding: 0 1.3rem;
+
+        div{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .navbar__logo{
+        font-size: $nav-logo-font-size;
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    i{
+        font-size: $icon-font-size;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #navbar{
+        display: none;
+    }
+}
