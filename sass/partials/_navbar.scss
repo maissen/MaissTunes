@@ -2,6 +2,7 @@
     height: $nav-height;
     color: white;
     background: $bg-color;
+    z-index: $navbar-zindex;
 
     .row{
         justify-content: space-between;

@@ -1,3 +1,4 @@
 function display_sidebar(){
-    // console.log('it works properly !');
+    aside_menu.classList.toggle("active-aside-menu");
+    aside_menu_behind.classList.toggle("active-aside-menu-behind");
 }

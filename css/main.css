@@ -221,6 +221,7 @@
   height: 60px;
   color: white;
   background: #242424;
+  z-index: 10;
 }
 #navbar .row {
   justify-content: space-between;
@@ -248,6 +249,40 @@
     display: none;
   }
 }
+#aside-menu {
+  width: 220px;
+  height: calc(100vh - 60px);
+  background: black;
+  margin-left: -220px;
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+#aside-menu__behind {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-color: #717171;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.9s;
+  z-index: 9;
+}
+
+.active-aside-menu {
+  margin-left: 0 !important;
+}
+
+.active-aside-menu-behind {
+  display: block !important;
+  transition: opacity 0.9s;
+  opacity: 0.3 !important;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -301,6 +336,7 @@ body {
   color: white;
   height: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
 
 .active-item {

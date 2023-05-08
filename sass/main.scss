@@ -3,6 +3,7 @@
 @import 'partials/functions-mixins';
 @import 'partials/assets';
 @import 'partials/navbar';
+@import 'partials/aside-menu';
 @import 'partials/resets';
 
 
@@ -13,6 +14,7 @@ body{
     color: white;
     height: 100vh;
     overflow-x: hidden;
+    position: relative;
 }
 
 .active-item{

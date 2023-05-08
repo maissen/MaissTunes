@@ -1,6 +1,8 @@
 //* global variables
 $bg-color: #242424;
 $main-color: #1e3f63;
+$transition: .2s;
+
 
 //* Icons
 $icon-font-size: 1.8rem;
@@ -11,3 +13,9 @@ $body-bg-color: linear-gradient(to bottom, $main-color, darken($main-color, 85%)
 //* navbar variables
 $nav-logo-font-size: 1.8rem;
 $nav-height: 60px;
+$navbar-zindex: 10;
+
+//* aside 
+$aside-width: 220px;
+$aside-zindex: 10;
+$aside-behind-zindex: calc($aside-zindex - 1);

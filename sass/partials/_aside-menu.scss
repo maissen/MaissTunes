@@ -1,0 +1,32 @@
+#aside-menu{
+    width: $aside-width;
+    height: calc(100vh - $nav-height);
+    background: darken($main-color, 30%);
+    margin-left: -$aside-width;
+    transition: $transition;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    z-index: $aside-zindex;
+}
+
+#aside-menu__behind{
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - $nav-height);
+    background-color: lighten($bg-color, 30%);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+    transition: opacity calc($transition + .7s);
+    z-index: $aside-behind-zindex;
+}
+
+.active-aside-menu{
+    margin-left: 0 !important;
+}
+.active-aside-menu-behind{
+    display: block !important;
+    transition: opacity calc($transition + .7s);
+    opacity: .3 !important;
+}
