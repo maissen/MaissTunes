@@ -21,6 +21,8 @@
         font-size: $nav-logo-font-size;
         display: inline-block;
         margin-left: 2rem;
+
+        span{color: $aside-separator-color}
     }
 
     i{
@@ -29,7 +31,7 @@
     }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
     #navbar{
         display: none;
     }

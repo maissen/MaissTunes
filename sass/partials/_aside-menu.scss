@@ -1,12 +1,63 @@
 #aside-menu{
     width: $aside-width;
-    height: calc(100vh - $nav-height);
-    background: darken($main-color, 30%);
-    margin-left: -$aside-width;
-    transition: $transition;
-    transition-timing-function: ease-in-out;
-    position: relative;
-    z-index: $aside-zindex;
+    background: $aside-bg-color;
+    height: calc(100vh - $aside-padding-top);
+    font-size: $aside-font-size;
+    font-family: $second-font-family;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-top: $aside-padding-top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: none; 
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $aside-scrollbar-bg-color; 
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: lighten($aside-scrollbar-bg-color, 10%); 
+    }
+
+    .aside-menu__links{
+
+        .aside-menu__item{
+            // margin-bottom: 1rem;
+            a{
+                @include aside-item();
+                transition: $transition;
+
+                &:hover{
+                    background-color: $text-hover-color;
+                }
+            }
+        }
+
+        .aside-menu__separator{
+            @include aside-item();
+            color: white !important;
+            padding-top: 4rem;
+            font-family: $main-font-family;
+            color: $aside-separator-color;
+            font-size: $aside-separator-font-size;
+            cursor: initial;
+        }
+    }
+
+    #aside-menu__log-in{
+        font-size: $aside-font-size;
+        margin: 3rem .2rem 1rem 1rem; 
+        @include button();
+    }
 }
 
 #aside-menu__behind{
@@ -22,11 +73,31 @@
     z-index: $aside-behind-zindex;
 }
 
-.active-aside-menu{
-    margin-left: 0 !important;
+
+
+@media only screen and (max-width: 769px){
+
+    #aside-menu{
+        height: calc(100vh - $nav-height - $aside-padding-top);
+        margin-left: -$aside-width;
+        transition: $transition margin;
+        transition-timing-function: ease-in-out;
+        position: relative;
+        z-index: $aside-zindex;
+    }
+    
+    .active-aside-menu{
+        margin-left: 0 !important;
+    }
+    .active-aside-menu-behind{
+        display: block !important;
+        transition: opacity calc($transition + .7s);
+        opacity: .3 !important;
+    }
 }
-.active-aside-menu-behind{
-    display: block !important;
-    transition: opacity calc($transition + .7s);
-    opacity: .3 !important;
+
+.active-aside-menu-item{
+    a{
+        color: $aside-separator-color !important;
+    }
 }

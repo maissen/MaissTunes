@@ -6,15 +6,20 @@
 @import 'partials/aside-menu';
 @import 'partials/resets';
 
+:root{
+    font-size: 62.5%;
+}
 
 body{
-    font-family: "Astonpoliz";
-    font-size: 62.5%;
+    font-family: $main-font-family;
     background: $body-bg-color;
     color: white;
     height: 100vh;
     overflow-x: hidden;
     position: relative;
+    min-height: 450px;
+    font-size: 2rem;
+    scroll-behavior: smooth;
 }
 
 .active-item{

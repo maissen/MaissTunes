@@ -20,13 +20,13 @@
 </head>
 <body>
 
-    <nav id="navbar" class="container" onclick="display_sidebar()">
+    <nav id="navbar" class="container">
         <div class="row">
             <div>
                 <!--? menu icon -->
-                <i class="fa-sharp fa-solid fa-bars"></i>
+                <i class="fa-sharp fa-solid fa-bars" onclick="display_sidebar()"></i>
                 <h1 class="navbar__logo">
-                    MaissTunes
+                    Maiss<span>Tunes</span>
                 </h1>
             </div>
 
@@ -35,8 +35,71 @@
         </div>
     </nav>
 
-    <aside id="aside-menu"></aside>
-    <div id="aside-menu__behind"></div>
+    <div id="aside-menu__behind" onclick="display_sidebar()"></div>
+    <aside id="aside-menu">
+        <ul class="aside-menu__links">
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Search
+                </a>
+            </li>
+            <li class="aside-menu__item active-aside-menu-item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Browse
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Favorite
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    About
+                </a>
+            </li>
+
+            <h2 class="aside-menu__separator">Library</h2>
+
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Recently Added
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Artist
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Albums
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Songs
+                </a>
+            </li>
+            <li class="aside-menu__item">
+                <a href="#">
+                    <i class="fa-solid fa-gears clickable-item"></i>
+                    Playlists
+                </a>
+            </li>
+        </ul>
+        <a href="#" id="aside-menu__log-in" >
+            Log In Now
+        </a>
+    </aside>
 
 
     <!-- Main JavaScript file link -->
