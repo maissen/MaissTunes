@@ -1,0 +1,9 @@
+#toolbar{
+    width: 100%;
+    height: $toolbar-height;
+    background: $bg-color;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: $toolbar-zindex;
+}

@@ -18,6 +18,10 @@ $nav-logo-font-size: 3.2rem;
 $nav-height: 60px;
 $navbar-zindex: 10;
 
+//* Toolbar
+$toolbar-height: 70px;
+$toolbar-zindex: $navbar-zindex;
+
 //* aside 
 $aside-width: 220px;
 $aside-zindex: 10;
@@ -29,6 +33,7 @@ $aside-bg-color: darken($main-color, 30%);
 $aside-scrollbar-bg-color: lighten($bg-color, 10%);
 $aside-padding-top: 1rem;
 $aside-separator-color: lighten($main-color, 10%);
+$aside-height: calc(100vh - $aside-padding-top - $toolbar-height);
 
 //* Loader Section
 $loader-section-zindex: calc($aside-zindex - 2);

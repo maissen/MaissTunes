@@ -1,7 +1,7 @@
 #aside-menu{
     width: $aside-width;
     background: $aside-bg-color;
-    height: calc(100vh - $aside-padding-top);
+    height: $aside-height;
     font-size: $aside-font-size;
     font-family: $second-font-family;
     overflow-y: scroll;
@@ -12,7 +12,7 @@
     justify-content: space-between;
     position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
 
     /* width */
     &::-webkit-scrollbar {
@@ -58,7 +58,7 @@
 
     #aside-menu__log-in{
         font-size: $aside-font-size;
-        margin: 3rem .2rem 1rem 1rem; 
+        margin: 5rem .2rem 1rem 1rem; 
         @include button();
     }
 }
@@ -81,8 +81,9 @@
 @media only screen and (max-width: 769px){
 
     #aside-menu{
-        height: calc(100vh - $nav-height - $aside-padding-top);
+        height: calc($aside-height - $nav-height);
         left: -$aside-width;
+        top: $nav-height;
         transition: $transition left;
         transition-timing-function: ease-in-out;
         z-index: $aside-zindex;

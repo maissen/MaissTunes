@@ -305,7 +305,7 @@ table {
 #aside-menu {
   width: 220px;
   background: black;
-  height: calc(100vh - 1rem);
+  height: calc(100vh - 1rem - 70px);
   font-size: 1.9rem;
   font-family: sans-serif;
   overflow-y: scroll;
@@ -316,7 +316,7 @@ table {
   justify-content: space-between;
   position: fixed;
   left: 0;
-  bottom: 0;
+  top: 0;
   /* width */
   /* Track */
   /* Handle */
@@ -370,7 +370,7 @@ table {
 }
 #aside-menu #aside-menu__log-in {
   font-size: 1.9rem;
-  margin: 3rem 0.2rem 1rem 1rem;
+  margin: 5rem 0.2rem 1rem 1rem;
   padding: 1.4rem 3.5rem;
   display: block;
   font-family: "Astonpoliz", sans-serif;
@@ -396,8 +396,9 @@ table {
 
 @media only screen and (max-width: 769px) {
   #aside-menu {
-    height: calc(100vh - 60px - 1rem);
+    height: calc(100vh - 1rem - 70px - 60px);
     left: -220px;
+    top: 60px;
     transition: 0.2s left;
     transition-timing-function: ease-in-out;
     z-index: 10;
@@ -418,7 +419,7 @@ table {
 #loader-section {
   margin-left: 220px;
   padding: 2rem;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem - 70px);
   overflow-y: scroll;
   scroll-behavior: smooth;
   /* Track */
@@ -442,12 +443,22 @@ table {
   #loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 4rem);
+    height: calc(100vh - 60px - 4rem - 70px);
   }
   .no-scroll {
     overflow-y: hidden;
   }
 }
+#toolbar {
+  width: 100%;
+  height: 70px;
+  background: #1b1b1b;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -472,10 +483,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-thumb:hover {
   background: #4e4e4e;
-}
-
-#body-content {
-  display: flex;
 }
 
 .active-item {
