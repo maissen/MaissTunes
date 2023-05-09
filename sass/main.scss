@@ -15,12 +15,23 @@ body{
     font-family: $main-font-family;
     background: $body-bg-color;
     color: white;
-    // height: 100vh;
     overflow-x: hidden;
     position: relative;
     min-height: 450px;
     font-size: 2rem;
-    scroll-behavior: smooth;
+  
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: none; 
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $aside-scrollbar-bg-color; 
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: lighten($aside-scrollbar-bg-color, 10%); 
+    }
 }
 
 #body-content{

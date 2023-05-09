@@ -1,6 +1,25 @@
 #loader-section{
     margin-left: $aside-width;
-    padding-top: 1.7rem;
+    padding: $loader-section-padding;
+    height: calc(100vh - $loader-section-padding*2);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: none; 
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $loader-section-scrollbar-bg-color; 
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken($loader-section-scrollbar-bg-color, 10%); 
+    }
 
 }
 
@@ -9,5 +28,10 @@
     #loader-section{
         margin-left: 0;
         margin-top: $nav-height;
+        height: calc(100vh - $nav-height - ($loader-section-padding * 2));
+    }
+
+    .no-scroll{
+        overflow-y: hidden;
     }
 }

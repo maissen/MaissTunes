@@ -1,0 +1,1 @@
+var loader_section = document.querySelector('#loader-section');

@@ -32,3 +32,5 @@ $aside-separator-color: lighten($main-color, 10%);
 
 //* Loader Section
 $loader-section-zindex: calc($aside-zindex - 2);
+$loader-section-padding: 2rem;
+$loader-section-scrollbar-bg-color: gray;
