@@ -54,58 +54,54 @@ table {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
-.col-1 {
-  width: 8.33%;
+@media only screen and (max-width: 600px) {
+  .col-0 {
+    display: none;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
 }
-
-.col-2 {
-  width: 16.66%;
-}
-
-.col-3 {
-  width: 25%;
-}
-
-.col-4 {
-  width: 33.33%;
-}
-
-.col-5 {
-  width: 41.66%;
-}
-
-.col-6 {
-  width: 50%;
-}
-
-.col-7 {
-  width: 58.33%;
-}
-
-.col-8 {
-  width: 66.66%;
-}
-
-.col-9 {
-  width: 75%;
-}
-
-.col-10 {
-  width: 83.33%;
-}
-
-.col-11 {
-  width: 91.66%;
-}
-
-.col-12 {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .col-sm-0 {
+    display: none;
+  }
   .col-sm-1 {
     width: 8.33%;
   }
@@ -143,7 +139,10 @@ table {
     width: 100%;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md-0 {
+    display: none;
+  }
   .col-md-1 {
     width: 8.33%;
   }
@@ -181,9 +180,12 @@ table {
     width: 100%;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .box {
     padding: 0 5%;
+  }
+  .col-lg-0 {
+    display: none;
   }
   .col-lg-1 {
     width: 8.33%;
@@ -225,6 +227,9 @@ table {
 @media only screen and (min-width: 1200px) {
   .box {
     padding: 0 6%;
+  }
+  .col-ex-lg-0 {
+    display: none;
   }
   .col-ex-lg-1 {
     width: 8.33%;
@@ -305,7 +310,7 @@ table {
 #aside-menu {
   width: 220px;
   background: black;
-  height: calc(100vh - 1rem - 70px);
+  height: calc(100vh - 1rem - 100px);
   font-size: 1.9rem;
   font-family: sans-serif;
   overflow-y: scroll;
@@ -396,7 +401,7 @@ table {
 
 @media only screen and (max-width: 769px) {
   #aside-menu {
-    height: calc(100vh - 1rem - 70px - 60px);
+    height: calc(100vh - 1rem - 100px - 60px);
     left: -220px;
     top: 60px;
     transition: 0.2s left;
@@ -419,7 +424,7 @@ table {
 #loader-section {
   margin-left: 220px;
   padding: 2rem;
-  height: calc(100vh - 4rem - 70px);
+  height: calc(100vh - 4rem - 100px);
   overflow-y: scroll;
   scroll-behavior: smooth;
   /* Track */
@@ -443,7 +448,7 @@ table {
   #loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 4rem - 70px);
+    height: calc(100vh - 60px - 4rem - 100px);
   }
   .no-scroll {
     overflow-y: hidden;
@@ -451,12 +456,20 @@ table {
 }
 #toolbar {
   width: 100%;
-  height: 70px;
+  height: 100px;
   background: #1b1b1b;
   position: fixed;
   left: 0;
   bottom: 0;
   z-index: 10;
+}
+#toolbar .row1 {
+  height: 60%;
+  background: green;
+}
+#toolbar > div > div {
+  height: 35px;
+  border: 2px dashed royalblue;
 }
 
 :root {

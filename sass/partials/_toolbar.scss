@@ -6,4 +6,11 @@
     left: 0;
     bottom: 0;
     z-index: $toolbar-zindex;
+
+    .row1{height: 60%; background: green;}
+
+    & > div > div{
+        height: 35px;
+        border: 2px dashed royalblue;
+    }
 }
