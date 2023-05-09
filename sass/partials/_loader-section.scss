@@ -1,0 +1,13 @@
+#loader-section{
+    margin-left: $aside-width;
+    padding-top: 1.7rem;
+
+}
+
+
+@media only screen and (max-width: 769px){
+    #loader-section{
+        margin-left: 0;
+        margin-top: $nav-height;
+    }
+}

@@ -1,10 +1,11 @@
 @import 'partials/variables';
 @import 'partials/typography';
 @import 'partials/functions-mixins';
+@import 'partials/resets';
 @import 'partials/assets';
 @import 'partials/navbar';
 @import 'partials/aside-menu';
-@import 'partials/resets';
+@import 'partials/loader-section';
 
 :root{
     font-size: 62.5%;
@@ -14,12 +15,16 @@ body{
     font-family: $main-font-family;
     background: $body-bg-color;
     color: white;
-    height: 100vh;
+    // height: 100vh;
     overflow-x: hidden;
     position: relative;
     min-height: 450px;
     font-size: 2rem;
     scroll-behavior: smooth;
+}
+
+#body-content{
+    display: flex;
 }
 
 .active-item{
