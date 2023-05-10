@@ -39,42 +39,42 @@
     <div id="aside-menu__behind" onclick="display_sidebar()"></div>
     <aside id="aside-menu">
             <ul class="aside-menu__links">
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('search-section', this)">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     Search
                 </li>
-                <li class="aside-menu__item active-aside-menu-item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item active-aside-menu-item" onclick="loadContent('browse-section', this)">
                     <i class="fa-solid fa-headphones"></i>
                     Browse
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('favorite-section', this)">
                         <i class="fa-solid fa-heart"></i>
                         Favorite
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('about-section', this)">
                     <i class="fa-solid fa-user"></i>
                     About
                 </li>
 
                 <h2 class="aside-menu__separator">Library</h2>
 
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('recently-added-section', this)">
                     <i class="fa-solid fa-calendar-days"></i>
                     Recently Added
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('artist-section', this)">
                     <i class="fa-solid fa-music"></i>
                     Artist
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('albums-section', this)">
                     <i class="fa-solid fa-guitar"></i>
                     Albums
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('songs-section', this)">
                     <i class="fa-solid fa-play"></i>
                     Songs
                 </li>
-                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                <li class="aside-menu__item" onclick="loadContent('playlists-section', this)">
                     <i class="fa-solid fa-list"></i>
                     Playlists
                 </li>
@@ -85,9 +85,33 @@
     </aside>
 
     <!--? Loader Section  -->
-    <!-- <main id="loader-section" class="container">
-    </main> -->
-    <iframe src=""  id="loader-section" frameborder="0"></iframe>
+
+    <!--! Search Section -->
+    <div class="loader-section" id="search-section">search</div>
+
+    <!--! Browse Section -->
+    <div class="loader-section active-section" id="browse-section">browse</div>
+
+    <!--! favorite Section -->
+    <div class="loader-section" id="favorite-section">fav</div>
+
+    <!--! about Section -->
+    <div class="loader-section" id="about-section">about section</div>
+
+    <!--! recently-added Section -->
+    <div class="loader-section" id="recently-added-section">recently-added</div>
+
+    <!--! artist Section -->
+    <div class="loader-section" id="artist-section">artist</div>
+
+    <!--! albums Section -->
+    <div class="loader-section" id="albums-section">albums</div>
+
+    <!--! songs Section -->
+    <div class="loader-section" id="songs-section">songs</div>
+
+    <!--! playlists Section -->
+    <div class="loader-section" id="playlists-section">playlists</div>
 
     <!--? Tool bar -->
     <div id="toolbar">
@@ -130,6 +154,17 @@
     <script src="../js/aside-menu.js"></script>
     <script src="../js/loader-section.js"></script>
     <script src="../js/toolbar.js"></script>
+    
+    <script src="../js/sections/about-section.js"></script>
+    <script src="../js/sections/albums-section.js"></script>
+    <script src="../js/sections/artist-section.js"></script>
+    <script src="../js/sections/browse-section.js"></script>
+    <script src="../js/sections/browse-section.js"></script>
+    <script src="../js/sections/favorite-section.js"></script>
+    <script src="../js/sections/playlists-section.js"></script>
+    <script src="../js/sections/recently-added-section.js"></script>
+    <script src="../js/sections/search-section.js"></script>
+    <script src="../js/sections/songs-section.js"></script>
 
 </body>
 </html>

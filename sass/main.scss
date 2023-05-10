@@ -8,6 +8,17 @@
 @import 'partials/loader-section';
 @import 'partials/toolbar';
 
+@import 'partials/loader-sections/about-section';
+@import 'partials/loader-sections/albums-section';
+@import 'partials/loader-sections/artist-section';
+@import 'partials/loader-sections/browse-section';
+@import 'partials/loader-sections/favorite-sections';
+@import 'partials/loader-sections/playlists-section';
+@import 'partials/loader-sections/search-section';
+@import 'partials/loader-sections/songs-section';
+@import 'partials/loader-sections/recently-added-section.scss';
+
+
 :root{
     font-size: 62.5%;
 }
@@ -20,19 +31,6 @@ body{
     position: relative;
     min-height: 450px;
     font-size: 2rem;
-  
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: none; 
-    }
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: $aside-scrollbar-bg-color; 
-    }
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: lighten($aside-scrollbar-bg-color, 10%); 
-    }
 }
 
 .active-item{

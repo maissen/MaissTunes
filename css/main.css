@@ -425,24 +425,46 @@ table {
   color: #2a588a !important;
 }
 
-#loader-section {
+.loader-section {
   height: calc(100vh - 80px);
   width: calc(100% - 220px);
   box-sizing: border-box;
   margin-left: 220px;
+  display: none;
   overflow-y: scroll;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.loader-section::-webkit-scrollbar {
+  width: 12px;
+}
+.loader-section::-webkit-scrollbar-track {
+  background: none;
+}
+.loader-section::-webkit-scrollbar-thumb {
+  background: gray;
+}
+.loader-section::-webkit-scrollbar-thumb:hover {
+  background: #676767;
 }
 
 @media only screen and (max-width: 769px) {
-  #loader-section {
+  .loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 80px);
+    height: calc(100vh - 60px - 4rem - 80px);
   }
   .no-scroll {
     overflow-y: hidden;
   }
 }
+.active-section {
+  display: block !important;
+}
+
 #toolbar {
   width: 100%;
   height: 80px;
@@ -598,6 +620,42 @@ table {
   outline: none;
 }
 
+#about-section {
+  background: gray;
+}
+
+#albums-section {
+  background: red;
+}
+
+#artist-section {
+  background: darkcyan;
+}
+
+#browse-section {
+  background: firebrick;
+}
+
+#favorite-section {
+  background: royalblue;
+}
+
+#playlists-section {
+  background: crimson;
+}
+
+#search-section {
+  background: tomato;
+}
+
+#songs-section {
+  background: orangered;
+}
+
+#recently-added-section {
+  background: blueviolet;
+}
+
 :root {
   font-size: 62.5%;
 }
@@ -610,18 +668,6 @@ body {
   position: relative;
   min-height: 450px;
   font-size: 2rem;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
-body::-webkit-scrollbar-track {
-  background: none;
-}
-body::-webkit-scrollbar-thumb {
-  background: #353535;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #4e4e4e;
 }
 
 .active-item {
