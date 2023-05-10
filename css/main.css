@@ -46,6 +46,7 @@ table {
 
 *::selection {
   background: #30649e;
+  color: #fff;
 }
 
 .container {
@@ -98,7 +99,7 @@ table {
     width: 100%;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   .col-sm-0 {
     display: none;
   }
@@ -139,7 +140,7 @@ table {
     width: 100%;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .col-md-0 {
     display: none;
   }
@@ -180,7 +181,7 @@ table {
     width: 100%;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .box {
     padding: 0 5%;
   }
@@ -339,7 +340,7 @@ table {
 #aside-menu::-webkit-scrollbar-thumb:hover {
   background: #4e4e4e;
 }
-#aside-menu .aside-menu__links .aside-menu__item a {
+#aside-menu .aside-menu__links .aside-menu__item {
   color: #696969;
   text-decoration: none;
   display: block;
@@ -349,11 +350,14 @@ table {
   display: flex;
   transition: 0.2s;
 }
-#aside-menu .aside-menu__links .aside-menu__item a i {
+#aside-menu .aside-menu__links .aside-menu__item i {
   margin-right: 0.8rem;
 }
-#aside-menu .aside-menu__links .aside-menu__item a:hover {
+#aside-menu .aside-menu__links .aside-menu__item:hover {
   background-color: rgba(30, 63, 99, 0.3);
+}
+#aside-menu .aside-menu__links .aside-menu__item:active {
+  background-color: rgba(80, 138, 202, 0.3);
 }
 #aside-menu .aside-menu__links .aside-menu__separator {
   color: #696969;
@@ -417,38 +421,23 @@ table {
     opacity: 0.3 !important;
   }
 }
-.active-aside-menu-item a {
+.active-aside-menu-item {
   color: #2a588a !important;
 }
 
 #loader-section {
+  height: calc(100vh - 80px);
+  width: calc(100% - 220px);
+  box-sizing: border-box;
   margin-left: 220px;
-  padding: 2rem;
-  height: calc(100vh - 4rem - 80px);
   overflow-y: scroll;
-  scroll-behavior: smooth;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
-#loader-section::-webkit-scrollbar {
-  width: 12px;
-}
-#loader-section::-webkit-scrollbar-track {
-  background: none;
-}
-#loader-section::-webkit-scrollbar-thumb {
-  background: gray;
-}
-#loader-section::-webkit-scrollbar-thumb:hover {
-  background: #676767;
 }
 
 @media only screen and (max-width: 769px) {
   #loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 4rem - 80px);
+    height: calc(100vh - 60px - 80px);
   }
   .no-scroll {
     overflow-y: hidden;
@@ -469,6 +458,14 @@ table {
 #toolbar .row > div {
   padding: 1rem;
   height: 100%;
+}
+#toolbar i {
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 1.9rem;
+}
+#toolbar i:hover {
+  color: #2a588a;
 }
 #toolbar #toolbar__music-thumb {
   display: flex;
@@ -493,10 +490,11 @@ table {
 }
 #toolbar #toolbar__music-name h4 {
   font-size: 1.9rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 #toolbar #toolbar__music-name h5 {
   color: #696969;
+  font-family: sans-serif;
 }
 #toolbar #toolbar__playback-controls {
   display: flex;
@@ -506,17 +504,11 @@ table {
   padding-bottom: 1.3rem;
 }
 #toolbar #toolbar__playback-controls #toolbar__playback-buttons {
-  font-size: 1.9rem;
   margin-bottom: 1.3rem;
 }
 #toolbar #toolbar__playback-controls #toolbar__playback-buttons > * {
-  transition: 0.2s;
-  cursor: pointer;
   padding: 1rem;
   padding-bottom: 0.5rem;
-}
-#toolbar #toolbar__playback-controls #toolbar__playback-buttons > *:hover {
-  color: #1e3f63;
 }
 #toolbar #toolbar__playback-controls #toolbar__playback-buttons #play-stop {
   font-size: 2.5rem;
@@ -525,8 +517,8 @@ table {
   width: 100%;
 }
 #toolbar #toolbar__playback-controls input {
-  -webkit-appearance: none;
-  height: 8px;
+  appearance: none;
+  height: 3px;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
@@ -574,8 +566,8 @@ table {
   width: 70%;
 }
 #toolbar #toolbar__settings .row div input {
-  -webkit-appearance: none;
-  height: 8px;
+  appearance: none;
+  height: 3px;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;

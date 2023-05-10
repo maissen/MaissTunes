@@ -35,13 +35,15 @@
 
         .aside-menu__item{
             // margin-bottom: 1rem;
-            a{
-                @include aside-item();
-                transition: $transition;
+            @include aside-item();
+            transition: $transition;
 
-                &:hover{
-                    background-color: $text-hover-color;
-                }
+            &:hover{
+                background-color: $text-hover-color;
+            }
+
+            &:active{
+                background-color: lighten($text-hover-color, 30%);
             }
         }
 
@@ -100,7 +102,5 @@
 }
 
 .active-aside-menu-item{
-    a{
-        color: $aside-separator-color !important;
-    }
+    color: $aside-separator-color !important;
 }

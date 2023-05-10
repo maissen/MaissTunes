@@ -14,6 +14,15 @@
         // border: 1px dashed royalblue;
     }
 
+    i{
+        transition: $transition;
+        cursor: pointer;
+        font-size: $aside-font-size;
+        &:hover{
+            color: $aside-separator-color;
+        }
+    }
+
     #toolbar__music-thumb{
         display: flex;
         align-items: center;
@@ -36,11 +45,12 @@
         font-weight: 400;
         h4{
             font-size: $aside-font-size;
-            margin-bottom: .5rem;
+            margin-bottom: 1rem;
         }
 
         h5{
-            color: $desactivated-text
+            color: $desactivated-text;
+            font-family: $second-font-family;
         }
     }
 
@@ -52,15 +62,11 @@
         padding-bottom: 1.3rem;
 
         #toolbar__playback-buttons{
-            font-size: $aside-font-size;
             margin-bottom: 1.3rem;
 
             & > *{
-                transition: $transition;
-                cursor: pointer;
                 padding: 1rem;
                 padding-bottom: .5rem;
-                &:hover{color: $main-color;}
             }
             
             #play-stop{

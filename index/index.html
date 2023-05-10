@@ -39,62 +39,44 @@
     <div id="aside-menu__behind" onclick="display_sidebar()"></div>
     <aside id="aside-menu">
             <ul class="aside-menu__links">
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        Search
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
                 </li>
-                <li class="aside-menu__item active-aside-menu-item">
-                    <a href="#">
-                        <i class="fa-solid fa-headphones"></i>
-                        Browse
-                    </a>
+                <li class="aside-menu__item active-aside-menu-item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-headphones"></i>
+                    Browse
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
                         <i class="fa-solid fa-heart"></i>
                         Favorite
-                    </a>
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                        About
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-user"></i>
+                    About
                 </li>
 
                 <h2 class="aside-menu__separator">Library</h2>
 
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        Recently Added
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Recently Added
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-music"></i>
-                        Artist
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-music"></i>
+                    Artist
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-guitar"></i>
-                        Albums
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-guitar"></i>
+                    Albums
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-play"></i>
-                        Songs
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-play"></i>
+                    Songs
                 </li>
-                <li class="aside-menu__item">
-                    <a href="#">
-                        <i class="fa-solid fa-list"></i>
-                        Playlists
-                    </a>
+                <li class="aside-menu__item" onclick="loadContent('content1.html', this)">
+                    <i class="fa-solid fa-list"></i>
+                    Playlists
                 </li>
             </ul>
             <a href="#" id="aside-menu__log-in" >
@@ -103,8 +85,9 @@
     </aside>
 
     <!--? Loader Section  -->
-    <main id="loader-section" class="container">
-    </main>
+    <!-- <main id="loader-section" class="container">
+    </main> -->
+    <iframe src=""  id="loader-section" frameborder="0"></iframe>
 
     <!--? Tool bar -->
     <div id="toolbar">
@@ -135,7 +118,7 @@
                         <i class="fa-sharp fa-solid fa-headphones"></i>
                         <input type="range" name="music-volume" id="music-volume" min="0" max="100" value="60">
                     </div>
-                    <i class="fa-solid fa-gears clickable-item"></i>
+                    <i class="fa-solid fa-caret-down" style="transform: rotateX(180deg)"></i>
                 </div>
             </div>
         </div>
@@ -146,6 +129,7 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/aside-menu.js"></script>
     <script src="../js/loader-section.js"></script>
+    <script src="../js/toolbar.js"></script>
 
 </body>
 </html>

@@ -25,8 +25,8 @@
 
 @mixin input-range(){
     & {
-        -webkit-appearance: none;
-        height: 8px;
+        appearance: none;
+        height: 3px;
         border-radius: 5px;
         background: #d3d3d3;
         outline: none;
@@ -55,5 +55,24 @@
         border-radius: 50%;
         background: $aside-separator-color;
         cursor: pointer;
+    }
+}
+
+@mixin container-scroll-bar(){
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: 12px;
+    }    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: none; 
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $loader-section-scrollbar-bg-color; 
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken($loader-section-scrollbar-bg-color, 10%); 
     }
 }
