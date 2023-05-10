@@ -18,7 +18,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -310,7 +310,7 @@ table {
 #aside-menu {
   width: 220px;
   background: black;
-  height: calc(100vh - 1rem - 70px);
+  height: calc(100vh - 80px);
   font-size: 1.9rem;
   font-family: sans-serif;
   overflow-y: scroll;
@@ -401,7 +401,7 @@ table {
 
 @media only screen and (max-width: 769px) {
   #aside-menu {
-    height: calc(100vh - 1rem - 70px - 60px);
+    height: calc(100vh - 80px - 60px);
     left: -220px;
     top: 60px;
     transition: 0.2s left;
@@ -424,7 +424,7 @@ table {
 #loader-section {
   margin-left: 220px;
   padding: 2rem;
-  height: calc(100vh - 4rem - 70px);
+  height: calc(100vh - 4rem - 80px);
   overflow-y: scroll;
   scroll-behavior: smooth;
   /* Track */
@@ -448,7 +448,7 @@ table {
   #loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 4rem - 70px);
+    height: calc(100vh - 60px - 4rem - 80px);
   }
   .no-scroll {
     overflow-y: hidden;
@@ -456,7 +456,7 @@ table {
 }
 #toolbar {
   width: 100%;
-  height: 70px;
+  height: 80px;
   background: #1b1b1b;
   position: fixed;
   left: 0;
@@ -467,8 +467,8 @@ table {
   height: 100%;
 }
 #toolbar .row > div {
+  padding: 1rem;
   height: 100%;
-  border: 1px dashed royalblue;
 }
 #toolbar #toolbar__music-thumb {
   display: flex;
@@ -486,6 +486,124 @@ table {
 }
 #toolbar #toolbar__music-thumb img {
   height: 100%;
+}
+#toolbar #toolbar__music-name {
+  padding: 0.7rem;
+  font-weight: 400;
+}
+#toolbar #toolbar__music-name h4 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+#toolbar #toolbar__music-name h5 {
+  color: #696969;
+}
+#toolbar #toolbar__playback-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1.3rem;
+}
+#toolbar #toolbar__playback-controls #toolbar__playback-buttons {
+  font-size: 1.9rem;
+  margin-bottom: 1.3rem;
+}
+#toolbar #toolbar__playback-controls #toolbar__playback-buttons > * {
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+#toolbar #toolbar__playback-controls #toolbar__playback-buttons > *:hover {
+  color: #1e3f63;
+}
+#toolbar #toolbar__playback-controls #toolbar__playback-buttons #play-stop {
+  font-size: 2.5rem;
+}
+#toolbar #toolbar__playback-controls input {
+  width: 100%;
+}
+#toolbar #toolbar__playback-controls input {
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.2s;
+  transition: opacity 0.2s;
+}
+#toolbar #toolbar__playback-controls input:hover {
+  opacity: 1;
+}
+#toolbar #toolbar__playback-controls input::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2a588a;
+  cursor: pointer;
+}
+#toolbar #toolbar__playback-controls input::-moz-range-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2a588a;
+  cursor: pointer;
+}
+#toolbar #toolbar__settings {
+  padding-bottom: 1.3rem;
+}
+#toolbar #toolbar__settings .row {
+  align-items: center;
+  justify-content: center;
+}
+#toolbar #toolbar__settings .row div {
+  border: none;
+  height: fit-content;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+#toolbar #toolbar__settings .row div input {
+  margin: 0 1rem;
+  margin-bottom: 0.3rem;
+  width: 70%;
+}
+#toolbar #toolbar__settings .row div input {
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: 0.2s;
+  transition: opacity 0.2s;
+}
+#toolbar #toolbar__settings .row div input:hover {
+  opacity: 1;
+}
+#toolbar #toolbar__settings .row div input::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2a588a;
+  cursor: pointer;
+}
+#toolbar #toolbar__settings .row div input::-moz-range-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #2a588a;
+  cursor: pointer;
+}
+#toolbar #toolbar__settings .row i {
+  outline: none;
 }
 
 :root {
