@@ -455,12 +455,14 @@ table {
   .loader-section {
     margin-left: 0;
     margin-top: 60px;
-    height: calc(100vh - 60px - 4rem - 80px);
-  }
-  .no-scroll {
-    overflow-y: hidden;
+    height: calc(100vh - 60px - 80px);
+    width: 100%;
   }
 }
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .active-section {
   display: block !important;
 }
