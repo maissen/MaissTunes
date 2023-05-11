@@ -1,3 +1,72 @@
-#browse-section{
-    background: firebrick;
+#top-albums,
+#top-playlists{
+    @include container-scroll-bar();
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+
+    @include boxs-grid-view();
+}
+
+#top-songs{
+    padding: 1.2rem;
+
+    .section-title{
+        margin-bottom: 2.4rem;
+        font-family: $main-font-family;
+    }
+
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color $transition;
+        margin-right: 1.3rem;
+        list-style-type: none;
+        padding: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background: $text-hover-color;
+            i{opacity: 1;}
+        }
+
+        .box{
+            display: flex;
+            padding: 0;
+    
+            &-thumb{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                margin-right: 1.3rem;
+                border-radius: 7px;
+    
+                img{height: 100%;}
+            }
+    
+            &-name{
+                font-family: $main-font-family;
+                margin-bottom: .8rem;
+            }
+            &-info{
+                color: $desactivated-text;
+            }
+        }
+        i{
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: $transition;
+            opacity: 0;
+            padding: 1rem;
+            transform: rotateX(180deg);
+
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
 }
