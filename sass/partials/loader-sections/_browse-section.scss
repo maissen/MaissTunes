@@ -1,9 +1,9 @@
 #top-albums,
 #top-playlists{
-    @include container-scroll-bar();
     padding: 1.2rem;
     margin-bottom: 1rem;
-
+    
+    @include container-scroll-bar();
     @include boxs-grid-view();
 }
 
@@ -36,8 +36,10 @@
             padding: 0;
     
             &-thumb{
-                width: 50px;
-                height: 50px;
+                min-width: 50px;
+                max-width: 50px;
+                min-height: 50px;
+                max-height: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -50,10 +52,27 @@
     
             &-name{
                 font-family: $main-font-family;
+                font-size: $aside-font-size;
+                text-align: left;
                 margin-bottom: .8rem;
+                font-weight: 100;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1; /* number of lines to show */
+                -webkit-box-orient: vertical;
+                min-width: 30px;
             }
             &-info{
                 color: $desactivated-text;
+                font-size: $aside-font-size - .3rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 1; /* number of lines to show */
+                -webkit-box-orient: vertical;
+                min-width: 93px;
+                text-align: left;
             }
         }
         i{
@@ -67,6 +86,24 @@
             &:hover{
                 color: $main-color;
             }
+        }
+
+        div:last-child{
+            text-align: right;            
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #top-songs{
+        li{
+            margin-right: 0;
+        }
+        i{
+            display: none;
+        }
+        div:last-child{
+            text-align: center;
         }
     }
 }

@@ -328,6 +328,14 @@ table {
   /* Handle */
   /* Handle on hover */
 }
+#aside-menu .aside__logo {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
+}
+#aside-menu .aside__logo span {
+  color: #2a588a;
+}
 #aside-menu::-webkit-scrollbar {
   width: 8px;
 }
@@ -635,12 +643,12 @@ table {
 
 #top-albums,
 #top-playlists {
+  padding: 1.2rem;
+  margin-bottom: 1rem;
   scroll-behavior: smooth;
   /* Track */
   /* Handle */
   /* Handle on hover */
-  padding: 1.2rem;
-  margin-bottom: 1rem;
 }
 #top-albums::-webkit-scrollbar,
 #top-playlists::-webkit-scrollbar {
@@ -673,12 +681,14 @@ table {
 #top-albums .box,
 #top-playlists .box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   margin: 0 10px;
   text-align: left;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 #top-albums .box .box-thumb,
 #top-playlists .box .box-thumb {
@@ -690,10 +700,11 @@ table {
   overflow: hidden;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
+  box-shadow: 7px 9px 20px -1px rgba(0, 0, 0, 0.77);
 }
 #top-albums .box .box-thumb img,
 #top-playlists .box .box-thumb img {
-  height: 100%;
+  height: 115%;
 }
 #top-albums .box .box-name,
 #top-playlists .box .box-name {
@@ -705,10 +716,12 @@ table {
   -webkit-line-clamp: 1; /* number of lines to show */
   -webkit-box-orient: vertical;
   margin-left: 0.5rem;
+  font-weight: 100;
 }
 #top-albums .box .box-info,
 #top-playlists .box .box-info {
   color: #696969;
+  font-size: 1.5rem;
   max-width: 100%;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -717,6 +730,7 @@ table {
   -webkit-line-clamp: 1; /* number of lines to show */
   -webkit-box-orient: vertical;
   margin-left: 0.5rem;
+  text-align: center;
 }
 
 #top-songs {
@@ -748,8 +762,10 @@ table {
   padding: 0;
 }
 #top-songs li .box-thumb {
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -762,10 +778,27 @@ table {
 }
 #top-songs li .box-name {
   font-family: "Astonpoliz", sans-serif;
+  font-size: 1.9rem;
+  text-align: left;
   margin-bottom: 0.8rem;
+  font-weight: 100;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  min-width: 30px;
 }
 #top-songs li .box-info {
   color: #696969;
+  font-size: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  min-width: 93px;
+  text-align: left;
 }
 #top-songs li i {
   margin-right: 1rem;
@@ -778,7 +811,21 @@ table {
 #top-songs li i:hover {
   color: #1e3f63;
 }
+#top-songs li div:last-child {
+  text-align: right;
+}
 
+@media only screen and (max-width: 768px) {
+  #top-songs li {
+    margin-right: 0;
+  }
+  #top-songs i {
+    display: none;
+  }
+  #top-songs div:last-child {
+    text-align: center;
+  }
+}
 #favorite-section {
   background: royalblue;
 }
