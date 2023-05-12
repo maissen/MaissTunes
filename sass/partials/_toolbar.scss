@@ -43,6 +43,10 @@
     #toolbar__music-name{
         padding: .7rem;
         font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
         h4{
             font-size: $aside-font-size;
             margin-bottom: 1rem;

@@ -72,10 +72,11 @@
                 -webkit-line-clamp: 1; /* number of lines to show */
                 -webkit-box-orient: vertical;
                 min-width: 93px;
+                width: 100%;
                 text-align: left;
             }
         }
-        i{
+        div:last-child i{
             margin-right: 1rem;
             cursor: pointer;
             transition: $transition;
@@ -90,6 +91,51 @@
 
         div:last-child{
             text-align: right;            
+        }   
+    }
+
+    #upload-music{
+        height: 74px;
+        border: 2px dashed $desactivated-text;
+        transition: $transition;
+        padding: 0;
+        margin-top: 2.5rem;
+        
+        &:hover{
+            background: none;
+            border: 2px dashed lighten($desactivated-text, 20%);
+
+            label{
+                color: lighten($desactivated-text, 20%);
+            }
+        }
+
+        label{
+            font-family: $main-font-family;
+            line-height: 74px;
+            width: 100%;
+            text-align: center;
+            color: $desactivated-text;
+            transition: $transition;
+            cursor: pointer;
+
+            &::selection{
+                background: none;
+            }
+        }
+
+        &__input{
+            display: none;
+        }
+    }
+
+    #cloneMe{
+        .box-thumb{
+            border: 1px solid #fff;
+        }
+
+        .box-thumb i{
+            color: white;
         }
     }
 }

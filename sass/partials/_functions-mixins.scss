@@ -111,9 +111,22 @@
             margin-bottom: 1.5rem;
             border-radius: 1rem;
             box-shadow: 7px 9px 20px -1px rgba(0,0,0,0.77);
+            position: relative;
+
+            i{
+                font-size: 6rem;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: $desactivated-text;
+                z-index: 1;
+            }
 
             img{
                 height: 115%;
+                position: relative;
+                z-index: 2;
             }
         }
 
