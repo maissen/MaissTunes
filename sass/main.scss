@@ -11,7 +11,8 @@
 @import 'partials/loader-sections/about-section';
 @import 'partials/loader-sections/albums-section';
 @import 'partials/loader-sections/artist-section';
-@import 'partials/loader-sections/browse-section';
+@import '../index/browse/browse-section';
+@import '../index/browse/more_info';
 @import 'partials/loader-sections/favorite-sections';
 @import 'partials/loader-sections/playlists-section';
 @import 'partials/loader-sections/search-section';

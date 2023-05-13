@@ -443,7 +443,7 @@ table {
   box-sizing: border-box;
   margin-left: 220px;
   display: block;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   /* Track */
   /* Handle */
@@ -898,6 +898,83 @@ table {
   background: royalblue !important;
 }
 
+.album-header {
+  min-height: 300px;
+  max-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background: firebrick;
+  padding: 1.5rem;
+}
+.album-header .album-header__thumb {
+  height: 180px;
+  width: 180px;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-right: 2rem;
+}
+.album-header .album-header__thumb img {
+  width: 100%;
+}
+.album-header .album-header__title {
+  font-family: "Astonpoliz", sans-serif;
+  margin-bottom: 1rem;
+}
+.album-header .album-header__nb-and-duration {
+  color: #696969;
+  margin-top: 0.7rem;
+}
+.album-header .album-header__buttons {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.album-header .album-header__buttons button {
+  padding: 1.4rem 3.5rem;
+  display: block;
+  font-family: "Astonpoliz", sans-serif;
+  background: #1e3f63;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.album-content-section {
+  padding: 1.5rem;
+  box-shadow: 0px -9px 20px -1px rgba(0, 0, 0, 0.475);
+  background: linear-gradient(to bottom, #1e3f63, #1b1b1b);
+}
+.album-content-section .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem 1.3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.album-content-section .box:hover {
+  background-color: #1f4167;
+}
+.album-content-section .box h3 {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 100;
+  font-family: "Astonpoliz", sans-serif;
+}
+
+@media only screen and (max-width: 650px) {
+  main .album-header__thumb {
+    display: none !important;
+  }
+}
 #favorite-section {
   background: royalblue;
 }

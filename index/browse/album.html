@@ -4,9 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Browse Section</title>
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="../../css/main.css">
+    
+    <!-- Add the Favicon -->
+    <link rel="shortcut icon" href="../../components/icons/icons8-music-32 (1).png" type="image/x-icon">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    here the album content
+<body style="min-height: 100vh;" onscroll="parallax_effect(event)" onload="countSongs()">
+    
+    <header class="album-header">
+        <div class="album-header__thumb">
+            <img src="../../components/images/eir 1.jpg" alt="Failed to load the image :(">
+        </div>
+        <div class="album-header__heading">
+            <h1 class="album-header__title">Favorite</h1>
+            <h3 class="album-header__artist">Eir Aoi</h3>
+            <h4 class="album-header__nb-and-duration"><span>18</span> songs - <span>1</span> hour and <span>14</span> minutes</h4>
+            <div class="album-header__buttons">
+                <button class="album-header__play-btn">Play</button>
+                <button class="album-header__Shuffle-btn">Shuffle</button>
+                <button class="album-header__icon-btn">...</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="album-content-section">
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+        <div class="box">
+            <div>
+                <h3 class="item_number">x - </h3>
+                <h3 class="song_name">I love Eir Aoi !</h3>
+            </div>
+            <div class="duration">3:16</div>
+        </div>
+    </section>
+    
+    
+
+    <script src="browse.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/aside-menu.js"></script>
+    <script src="../../js/loader-section.js"></script>
+    <script src="../../js/toolbar.js"></script>
+
 </body>
 </html>
