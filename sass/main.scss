@@ -27,9 +27,11 @@ body{
     font-family: sans-serif;
     background: $body-bg-color;
     color: white;
-    overflow-x: hidden;
     position: relative;
+    overflow-x: hidden;
     font-size: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .active-item{

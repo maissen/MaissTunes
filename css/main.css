@@ -49,6 +49,10 @@ table {
   color: #fff;
 }
 
+* {
+  position: relative;
+}
+
 .container {
   padding: 0 2.5%;
 }
@@ -647,11 +651,12 @@ table {
 #top-albums,
 #top-playlists {
   padding: 1.2rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   scroll-behavior: smooth;
   /* Track */
   /* Handle */
   /* Handle on hover */
+  backdrop-filter: blur(8px);
 }
 #top-albums::-webkit-scrollbar,
 #top-playlists::-webkit-scrollbar {
@@ -751,6 +756,7 @@ table {
 
 #top-songs {
   padding: 1.2rem;
+  backdrop-filter: blur(8px);
 }
 #top-songs .section-title {
   margin-bottom: 2.4rem;
@@ -878,6 +884,20 @@ table {
     text-align: center;
   }
 }
+#visual-effect {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(219, 219, 219, 0.468);
+  position: absolute;
+  z-index: 0;
+  transition: background-color 0.2s;
+}
+
+.change-visual-effect-color {
+  background: royalblue !important;
+}
+
 #favorite-section {
   background: royalblue;
 }
@@ -906,9 +926,11 @@ body {
   font-family: sans-serif;
   background: linear-gradient(to bottom, #1e3f63, #1b1b1b);
   color: white;
-  overflow-x: hidden;
   position: relative;
+  overflow-x: hidden;
   font-size: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .active-item {

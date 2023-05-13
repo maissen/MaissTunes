@@ -1,14 +1,16 @@
 #top-albums,
 #top-playlists{
     padding: 1.2rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     
     @include container-scroll-bar();
     @include boxs-grid-view();
+    backdrop-filter: $blur;
 }
 
 #top-songs{
     padding: 1.2rem;
+    backdrop-filter: $blur;
 
     .section-title{
         margin-bottom: 2.4rem;
@@ -152,4 +154,18 @@
             text-align: center;
         }
     }
+}
+
+#visual-effect{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(219, 219, 219, 0.468);
+    position: absolute;
+    z-index: 0;
+    transition: background-color $transition;
+}
+
+.change-visual-effect-color{
+    background: royalblue !important;
 }
