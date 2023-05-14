@@ -38,7 +38,7 @@
         <div class="box" id="cloneMe" style="display: none;">
                 <h3 class="item_number"></h3>
                 <h3 class="song_name"></h3>
-                <audio src="../../components/audios/Alan Walker/asha Alex Sloan  Hero Official Music Video.mp3"></audio>
+                <audio src=""></audio>
         </div>
 
         <!--? this script is to display all the songs in the directory -->
@@ -59,26 +59,48 @@
             ];
             
             var songList = document.querySelector('.album-content-section');
-            let currentSong = null;
             
             songs.forEach(song => {
                 var boxItem = document.getElementById('cloneMe').cloneNode(true);
                 boxItem.style.display = 'flex';
+                boxItem.id = '';
                 boxItem.children[1].textContent = getAudioName(song.url);
-                boxItem.addEventListener('click', () => playSong(song.url, boxItem));
-                songList.appendChild(boxItem);
-
-                function playSong(url, boxItem) {
-                    // to be filled !
-                }
-                
+                boxItem.children[2].src = song.url;
+                songList.appendChild(boxItem);         
             });
-        
+            
             
             function getAudioName(url) {
                 const startIndex = url.lastIndexOf('/') + 1;
                 const endIndex = url.lastIndexOf('.');
                 return url.substring(startIndex, endIndex);
+            }
+            </script>
+
+
+        <script>
+            let currentPlaying = null;
+            // playSong(song.url, boxItem.children[2], boxItem));
+
+            for(let i = 0; i < document.querySelectorAll('.box').length; i++){
+                document.querySelectorAll('.box')[i].addEventListener('click', function(){
+                    if(this == currentPlaying){
+                        (this.children[2].paused)? this.children[2].play() : this.children[2].pause();
+                    }
+                    else{
+                        if(currentPlaying){
+                            currentPlaying.children[2].pause();
+                            currentPlaying.children[2].load();
+                            currentPlaying.children[1].classList.remove('playing');
+                            currentPlaying.children[0].classList.remove('playing');
+                        }
+                        this.children[2].load();
+                        this.children[2].play();
+                        this.children[1].classList.add('playing');
+                        this.children[0].classList.add('playing');
+                        currentPlaying = this;
+                    }
+                });
             }
         </script>
         
