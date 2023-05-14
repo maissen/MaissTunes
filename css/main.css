@@ -64,7 +64,7 @@ table {
 
 @media only screen and (max-width: 600px) {
   .col-0 {
-    display: none;
+    display: none !important;
   }
   .col-1 {
     width: 8.33%;
@@ -105,7 +105,7 @@ table {
 }
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   .col-sm-0 {
-    display: none;
+    display: none !important;
   }
   .col-sm-1 {
     width: 8.33%;

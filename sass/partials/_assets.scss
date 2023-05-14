@@ -10,7 +10,7 @@
 
 //? starts from extra small devices */
 @media only screen and (max-width: 600px){
-    .col-0 {display: none;}
+    .col-0 {display: none !important;}
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -27,7 +27,7 @@
 
 //? Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px)  and (max-width: 768px){
-    .col-sm-0 {display: none;}
+    .col-sm-0 {display: none !important;}
     .col-sm-1 {width: 8.33%;}
     .col-sm-2 {width: 16.66%;}
     .col-sm-3 {width: 25%;}
