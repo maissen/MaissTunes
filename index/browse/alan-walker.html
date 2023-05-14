@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Section</title>
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="../../css/main.css">
+    
+    <!-- Add the Favicon -->
+    <link rel="shortcut icon" href="../../components/icons/icons8-music-32 (1).png" type="image/x-icon">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body style="min-height: 100vh;" onscroll="parallax_effect(event)" onload="countSongs()">
+    
+    <header class="album-header">
+        <div class="album-header__thumb">
+            <img src="../../components/images/alan-walker.jfif" alt="Failed to load the image :(">
+        </div>
+        <div class="album-header__heading">
+            <h1 class="album-header__title">Alan Walker</h1>
+            <h3 class="album-header__artist">New Realeases 2023</h3>
+            <h4 class="album-header__nb-and-duration"><span>18</span> songs - <span>1</span> hour and <span>14</span> minutes</h4>
+            <div class="album-header__buttons">
+                <button class="album-header__play-btn">Play</button>
+                <button class="album-header__Shuffle-btn">Shuffle</button>
+                <button class="album-header__icon-btn">...</button>
+            </div>
+        </div>
+    </header>
+    
+    <section class="album-content-section">
+        <div class="box" id="cloneMe" style="display: none;">
+                <h3 class="item_number"></h3>
+                <h3 class="song_name"></h3>
+                <audio src="../../components/audios/Alan Walker/asha Alex Sloan  Hero Official Music Video.mp3"></audio>
+        </div>
+
+        <!--? this script is to display all the songs in the directory -->
+        <script>
+            const songs = [
+                { url: '../../components/audios/Alan Walker/Alan Walker  Ava Max  Alone Pt II.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker  Ina Wroldsen  Blue Official Lyric Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker  Sasha Alex Sloan  Hero Restrung.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker  The Drum Official Music Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker  Torine  Hello World Official Music Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker and AuRa  Somebody Like U Official Music Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker Different World Trailer.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker x Imanbek  Sweet Dreams Official Lyric Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan Walker x Jamie Miller  Running Out Of Roses Official Lyric Video.mp3' },
+                { url: '../../components/audios/Alan Walker/Alan x Walkers  Unity.mp3' },
+                { url: '../../components/audios/Alan Walker/Alok  Alan Walker  Headlights feat KIDDO Official Lyric Video.mp3' },
+                { url: '../../components/audios/Alan Walker/asha Alex Sloan  Hero Official Music Video.mp3' }
+            ];
+            
+            var songList = document.querySelector('.album-content-section');
+            let currentSong = null;
+            
+            songs.forEach(song => {
+                var boxItem = document.getElementById('cloneMe').cloneNode(true);
+                boxItem.style.display = 'flex';
+                boxItem.children[1].textContent = getAudioName(song.url);
+                boxItem.addEventListener('click', () => playSong(song.url, boxItem));
+                songList.appendChild(boxItem);
+
+                function playSong(url, boxItem) {
+                    // to be filled !
+                }
+                
+            });
+        
+            
+            function getAudioName(url) {
+                const startIndex = url.lastIndexOf('/') + 1;
+                const endIndex = url.lastIndexOf('.');
+                return url.substring(startIndex, endIndex);
+            }
+        </script>
+        
+        <!--? this script is to count all the songs -->
+        <script>
+            function countSongs(){
+                const song_items = document.querySelectorAll('.item_number');
+                for(let i = 0; i < song_items.length; i++){
+                    song_items[i].textContent = i + ' - ';
+                }
+            }
+        </script>
+
+    </section>
+
+    
+
+    <script src="browse.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/aside-menu.js"></script>
+    <script src="../../js/loader-section.js"></script>
+    <script src="../../js/toolbar.js"></script>
+
+</body>
+</html>

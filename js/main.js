@@ -11,16 +11,16 @@ for(let i = 0; i < allow_visual_effect.length; i++){
     });
 }
 
-function visual_effect(){
-    const elements = document.querySelectorAll('.box, .songs-list-item');
-    for(let i = 0; i < elements.length; i++){
-        elements[i].addEventListener('mouseenter', function(){
-            circle.classList.add('change-visual-effect-color');
-        });
-        elements[i].addEventListener('mouseleave', function(){
-            circle.classList.remove('change-visual-effect-color');
-        });
-    }
-}
+// function visual_effect(){
+//     const elements = document.querySelectorAll('.box, .songs-list-item');
+//     for(let i = 0; i < elements.length; i++){
+//         elements[i].addEventListener('mouseenter', function(){
+//             circle.classList.add('change-visual-effect-color');
+//         });
+//         elements[i].addEventListener('mouseleave', function(){
+//             circle.classList.remove('change-visual-effect-color');
+//         });
+//     }
+// }
 
-visual_effect();
+// visual_effect();
