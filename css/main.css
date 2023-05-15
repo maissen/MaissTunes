@@ -508,16 +508,19 @@ table {
   justify-content: center;
 }
 #toolbar #toolbar__music-thumb div {
-  width: 5rem;
-  height: 5rem;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
 }
-#toolbar #toolbar__music-thumb img {
-  height: 100%;
+#toolbar #toolbar__music-thumb i {
+  font-size: 2.6rem;
+  border: 2px solid #696969;
+  padding: 1.5rem;
+  border-radius: 50%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
 }
 #toolbar #toolbar__music-name {
   padding: 0.7rem;
@@ -636,6 +639,14 @@ table {
   outline: none;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 #about-section {
   background: gray;
 }
@@ -904,8 +915,16 @@ table {
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  background: firebrick;
   padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.album-header video {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .album-header .album-header__thumb {
   height: 180px;

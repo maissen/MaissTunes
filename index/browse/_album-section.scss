@@ -4,8 +4,17 @@
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
-    background: firebrick;
     padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+
+    video{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .album-header__thumb{
         height: 180px; // because of the x-margin 10px from each side

@@ -19,6 +19,7 @@
 <body style="min-height: 100vh;" onscroll="parallax_effect(event)" onload="countSongs()">
     
     <header class="album-header">
+        <video src="../../components/videos/wallpaper1.mp4" loop></video>
         <div class="album-header__thumb">
             <img src="../../components/images/alan-walker.jfif" alt="Failed to load the image :(">
         </div>
@@ -75,20 +76,28 @@
                 const endIndex = url.lastIndexOf('.');
                 return url.substring(startIndex, endIndex);
             }
-            </script>
+        </script>
 
-
+        <!--? this script is to add the playSong() function to the clicked song -->
         <script>
             let currentPlaying = null;
-            // playSong(song.url, boxItem.children[2], boxItem));
+            const video = document.querySelector('video');
 
             for(let i = 0; i < document.querySelectorAll('.box').length; i++){
                 document.querySelectorAll('.box')[i].addEventListener('click', function(){
                     if(this == currentPlaying){
-                        (this.children[2].paused)? this.children[2].play() : this.children[2].pause();
+                        if(this.children[2].paused){
+                            this.children[2].play();
+                            video.play();
+                        }
+                        else{
+                            this.children[2].pause();
+                            video.pause();
+                        }
                     }
                     else{
                         if(currentPlaying){
+                            video.pause();
                             currentPlaying.children[2].pause();
                             currentPlaying.children[2].load();
                             currentPlaying.children[1].classList.remove('playing');
@@ -96,6 +105,7 @@
                         }
                         this.children[2].load();
                         this.children[2].play();
+                        video.play();
                         this.children[1].classList.add('playing');
                         this.children[0].classList.add('playing');
                         currentPlaying = this;
@@ -123,7 +133,9 @@
     <script src="../../js/navbar.js"></script>
     <script src="../../js/aside-menu.js"></script>
     <script src="../../js/loader-section.js"></script>
-    <script src="../../js/toolbar.js"></script>
+    <script src="../../js/toolbar.js">
+        alert(document.qyerySelector('#toolbar'));
+    </script>
 
 </body>
 </html>
